@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deep-cache-cleaner"
+version = "1.0.0"
+description = "Comprehensive cache clearing utility for PyTorch, HuggingFace, and other ML libraries"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Mihai Badea", email = "mmihai.badea@gmail.com"}
+]
+maintainers = [
+    {name = "Mihai Badea", email = "mmihai.badea@gmail.com"}
+]
+keywords = ["cache", "pytorch", "huggingface", "ml", "cleanup", "memory"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Systems Administration",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+gpu = ["torch>=1.9.0"]
+transformers = ["transformers>=4.0.0"]
+sentence-transformers = ["sentence-transformers>=2.0.0"]
+all = ["torch>=1.9.0", "transformers>=4.0.0", "sentence-transformers>=2.0.0"]
+dev = ["pytest>=6.0", "pytest-cov", "black", "flake8", "mypy"]
+
+[project.urls]
+Homepage = "https://github.com/mihai-badea/deep-cache-cleaner"
+Documentation = "https://github.com/mihai-badea/deep-cache-cleaner#readme"
+Repository = "https://github.com/mihai-badea/deep-cache-cleaner"
+"Bug Tracker" = "https://github.com/mihai-badea/deep-cache-cleaner/issues"
+
+[project.scripts]
+deep-cache-cleaner = "cache_cleaner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
