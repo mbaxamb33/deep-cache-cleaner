@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "deep-cache-cleaner"
-version = "1.0.0"
+version = "1.0.1"
 description = "Comprehensive cache clearing utility for PyTorch, HuggingFace, and other ML libraries"
 readme = "README.md"
 license = "MIT"
@@ -39,10 +39,10 @@ all = ["torch>=1.9.0", "transformers>=4.0.0", "sentence-transformers>=2.0.0"]
 dev = ["pytest>=6.0", "pytest-cov", "black", "flake8", "mypy"]
 
 [project.urls]
-Homepage = "https://github.com/mihai-badea/deep-cache-cleaner"
-Documentation = "https://github.com/mihai-badea/deep-cache-cleaner#readme"
-Repository = "https://github.com/mihai-badea/deep-cache-cleaner"
-"Bug Tracker" = "https://github.com/mihai-badea/deep-cache-cleaner/issues"
+Homepage = "https://github.com/mbaxamb33/deep-cache-cleaner"
+Documentation = "https://github.com/mbaxamb33/deep-cache-cleaner#readme"
+Repository = "https://github.com/mbaxamb33/deep-cache-cleaner"
+"Bug Tracker" = "https://github.com/mbaxamb33/deep-cache-cleaner/issues"
 
 [project.scripts]
 deep-cache-cleaner = "cache_cleaner.cli:main"
